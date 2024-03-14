@@ -12,9 +12,11 @@ function rollDice(){
 function updateRollHistory(){
 rollHistoryElement.innerHTML=""
 for(let i=0;i<historyList.length;i++){
+    if(i <6){
     const listItem=document.createElement("li");
     listItem.innerHTML=`Roll${i+1}:<span>${getDiceFace(historyList[i])}</span>`
     rollHistoryElement.appendChild(listItem);
+    }
 }
 }
 function getDiceFace(rollResult){
